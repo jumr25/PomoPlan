@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="PomoPlan, prototipo web de planificación de estudio y concentración vinculado con el ODS 4.">
+    <title>Video y guía | PomoPlan</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.png">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/interacciones.js" defer></script>
+</head>
+
+<body><a class="saltar" href="#contenido">Saltar al contenido</a>
+    <header class="cabecera">
+        <div class="contenedor barra">
+            <a class="marca" href="index.html#inicio" aria-label="PomoPlan, ir al inicio">
+                <img src="imagenes/logo.png" alt="" width="44" height="44">PomoPlan
+            </a>
+            <button id="boton-menu" class="hamburguesa" type="button"
+                    aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú">
+                <span class="lineas" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span id="texto-menu">Menú</span>
+            </button>
+            <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li>
+                        <details id="resolver" class="desplegable">
+                            <summary>Probar funcionalidades</summary>
+                            <ul class="submenu">
+                                <li><a href="index.html#hu3">HU3 · Plan de avance</a></li>
+                                <li><a href="index.html#hu1">HU1 · Blindaje focal</a></li>
+                                <li><a href="index.html#hu2">HU2 · Tareas y deshacer</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="recursos.html">Video y guía</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- INTEGRACIÓN HU6: Interruptor de Modo Nocturno -->
+            <button id="toggle-modo-nocturno" class="boton boton-secundario" type="button" aria-label="Cambiar modo de lectura">🌙 Modo Nocturno</button>
+        </div>
+    </header>
+    <main id="contenido">
+        <section class="seccion contenedor">
+            <p class="etiqueta">Material de apoyo · ODS 4</p>
+            <h1>Video y guía para conocer PomoPlan</h1>
+            <div class="dos-columnas">
+                <div><video class="video" controls preload="metadata" playsinline>
+                        <source src="videos/presentacion.mp4" type="video/mp4">Tu navegador no admite video HTML5. <a
+                            href="videos/presentacion.mp4">Abrir video local</a>.
+                    </video>
+                    <p class="nota">Video de presentación incluido en los recursos del proyecto original. <a
+                            href="videos/presentacion.mp4">Abrir el archivo directamente</a>.</p>
+                </div>
+                <div>
+                    <h2>Cómo funciona el recorrido de demostración</h2>
+                    <ol>
+                        <li>En HU3, elige una actividad y ajusta la intensidad de estudio (25 o 50 min).</li>
+                        <li>En HU1, prueba el blindaje focal y contabiliza interrupciones menores con el registro rápido de distracciones.</li>
+                        <li>En HU2, confirma el borrado de tareas y recupera la lista con «Deshacer».</li>
+                    </ol>
+                    <p>Esta landing permite explorar el diseño de las Historias de Usuario usando HTML5, CSS responsive y JS interactivo.
+                    </p><a class="boton" href="index.html#hu3">Probar el planificador</a>
+                </div>
+            </div>
+            <div class="tarjeta recurso-ods">
+                <h2>Vínculo con el ODS 4</h2>
+                <p>El proyecto busca apoyar la organización y concentración durante el estudio universitario. No
+                    sustituye técnicas de aprendizaje ni representa una herramienta clínica.</p>
+                <p><strong>Créditos:</strong> imágenes, logotipo y video conservados del proyecto PomoPlan entregado por
+                    el equipo. Iconos SVG de redes incluidos a partir del material de ejemplo web_site0, utilizados como
+                    referencias a plataformas generales.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie-grid">
+                <div><strong>PomoPlan · ODS 4</strong>
+                    <p>Estudio organizado, una tarea a la vez.</p><small>Prototipo académico sin registro ni envío de
+                        datos.</small>
+                </div>
+                <nav aria-label="Redes sociales de referencia" class="redes"><a href="https://www.facebook.com/"
+                        target="_blank" rel="noopener noreferrer"><img src="iconos/facebook.svg" width="22" height="22"
+                            alt="">Facebook</a><a href="https://www.instagram.com/" target="_blank"
+                        rel="noopener noreferrer"><img src="iconos/instagram.svg" width="22" height="22"
+                            alt="">Instagram</a><a href="https://www.youtube.com/" target="_blank"
+                        rel="noopener noreferrer"><img src="iconos/youtube.svg" width="22" height="22"
+                            alt="">YouTube</a></nav>
+            </div>
+            <p class="pie-nota">Enlaces a plataformas generales de referencia; no representan cuentas oficiales de
+                PomoPlan. © 2026 PomoPlan.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

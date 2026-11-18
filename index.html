@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="PomoPlan, prototipo web de planificación de estudio y concentración vinculado con el ODS 4.">
+    <title>Inicio | PomoPlan</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.png">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/interacciones.js" defer></script>
+</head>
+
+<body><a class="saltar" href="#contenido">Saltar al contenido</a>
+    <header class="cabecera">
+        <div class="contenedor barra">
+            <a class="marca" href="index.html#inicio" aria-label="PomoPlan, ir al inicio">
+                <img src="imagenes/logo.png" alt="" width="44" height="44">PomoPlan
+            </a>
+            <button id="boton-menu" class="hamburguesa" type="button"
+                    aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú">
+                <span class="lineas" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span id="texto-menu">Menú</span>
+            </button>
+            <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li>
+                        <details id="resolver" class="desplegable">
+                            <summary>Probar funcionalidades</summary>
+                            <ul class="submenu">
+                                <li><a href="index.html#hu3">HU3 · Plan de avance</a></li>
+                                <li><a href="index.html#hu1">HU1 · Blindaje focal</a></li>
+                                <li><a href="index.html#hu2">HU2 · Tareas y deshacer</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="recursos.html">Video y guía</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- INTEGRACIÓN HU6: Interruptor de Modo Nocturno -->
+            <button id="toggle-modo-nocturno" class="boton boton-secundario" type="button" aria-label="Cambiar modo de lectura">🌙 Modo Nocturno</button>
+        </div>
+    </header>
+    <main id="contenido">
+        <!-- PASO 1: portada con texto e imagen, dos columnas en escritorio -->
+        <section id="inicio" class="hero seccion">
+            <div class="contenedor dos-columnas">
+                <div>
+                    <p class="etiqueta">ODS 4 · Educación de calidad</p>
+                    <h1>Estudia con claridad, avanza paso a paso.</h1>
+                    <p class="intro">PomoPlan es una propuesta para estudiantes universitarios que quieren dividir
+                        entregas extensas, enfocarse durante cada bloque y evitar perder tareas por error.</p>
+                    <div class="acciones"><a class="boton" href="#hu3">Configura tu plan</a><a
+                            class="boton boton-secundario" href="#funcionalidades">Explorar funcionalidades</a></div>
+                    <p class="nota">Demostración educativa de interfaz. No se guardan datos ni se bloquean pestañas.</p>
+                </div>
+                <figure><img class="foto" src="imagenes/galeria1.png"
+                        alt="Vista de interfaz de PomoPlan relacionada con estudio y concentración">
+                    <figcaption>Una sola tarea a la vez.</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="nosotros" class="seccion fondo">
+            <div class="contenedor dos-columnas"><img class="foto" src="imagenes/nosotros.png" loading="lazy"
+                    alt="Imagen de presentación del proyecto PomoPlan">
+                <div>
+                    <p class="etiqueta">Nuestra propuesta</p>
+                    <h2>Una experiencia de estudio menos abrumadora</h2>
+                    <p>La sobrecarga académica, el ruido y las distracciones pueden dificultar la concentración.
+                        PomoPlan plantea organizar tareas en micro-bloques y ofrecer decisiones claras al usuario.</p>
+                    <p>El proyecto se relaciona con el <strong>ODS 4: Educación de calidad</strong> al explorar
+                        herramientas que faciliten la organización y el aprendizaje.</p>
+                </div>
+            </div>
+        </section>
+        <section id="funcionalidades" class="seccion">
+            <div class="contenedor">
+                <p class="etiqueta">Explora el recorrido</p>
+                <h2>Tres historias de usuario, tres interacciones</h2>
+                <div class="tarjetas">
+                    <article class="tarjeta"><span class="numero">HU3 · Planificación</span><img
+                            src="imagenes/galeria2.png" alt="Referencia visual de planificación por bloques"
+                            loading="lazy">
+                        <h3>Divide tu tarea</h3>
+                        <p>Selecciona una actividad y observa un plan de cuatro micro-bloques de 25 minutos.</p><a
+                            href="#hu3">Probar planificador</a>
+                    </article>
+                    <article class="tarjeta"><span class="numero">HU1 · Concentración</span><img
+                            src="imagenes/galeria1.png" alt="Referencia de pantalla de concentración" loading="lazy">
+                        <h3>Pausa reflexiva</h3>
+                        <p>Simula una decisión consciente antes de interrumpir un bloque.</p><a href="#hu1">Probar
+                            blindaje</a>
+                    </article>
+                    <article class="tarjeta"><span class="numero">HU2 · Recuperación</span><img
+                            src="imagenes/servicios.jpeg" alt="Imagen ilustrativa de organización de actividades"
+                            loading="lazy">
+                        <h3>Deshaz una acción</h3>
+                        <p>Ensaya eliminar tareas completadas y restaurarlas sin perder la lista de ejemplo.</p><a
+                            href="#hu2">Probar tareas</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- HU3: radios con el mismo name y respuestas relacionadas por :checked -->
+        <section id="hu3" class="seccion fondo">
+            <div class="contenedor">
+                <p class="etiqueta">HU3 · Configura tu plan</p>
+                <h2>Convierte una entrega extensa en pasos pequeños</h2>
+                <p>Selecciona el tipo de actividad. En esta simulación se muestran planes ilustrativos de cuatro bloques con descansos sugeridos.</p>
+                
+                <fieldset class="orientador">
+                    <legend>1. ¿Qué necesitas avanzar?</legend>
+                    
+                    <!-- INTEGRACIÓN HU5: Selector de intensidad de estudio -->
+                    <div class="selector-intensidad-contenedor" style="margin-bottom: 1rem;">
+                        <label for="intensidad-estudio"><strong>Intensidad de estudio:</strong></label>
+                        <select id="intensidad-estudio" name="intensidad-estudio">
+                            <option value="25">Bloques estándar (25 min)</option>
+                            <option value="50">Bloques profundos (50 min)</option>
+                        </select>
+                    </div>
+
+                    <div class="selector-planes"><input class="radio-oculto" type="radio" name="tipo-plan" id="ensayo"
+                            checked><label class="opcion" for="ensayo">Redactar un informe</label><input
+                            class="radio-oculto" type="radio" name="tipo-plan" id="lectura"><label class="opcion"
+                            for="lectura">Lectura de investigación</label><input class="radio-oculto" type="radio"
+                            name="tipo-plan" id="ejercicios"><label class="opcion" for="ejercicios">Resolver
+                            ejercicios</label>
+                        <div class="resultados" aria-live="polite">
+                            <div class="respuesta ensayo">
+                                <h3>Tu plan de avance · Informe</h3>
+                                <ol class="bloques">
+                                    <li>Leer y comprender la consigna <span class="tiempo-bloque">25 min</span></li>
+                                    <li>Buscar fuentes bibliográficas <span class="tiempo-bloque">25 min</span></li>
+                                    <li>Redactar borrador inicial <span class="tiempo-bloque">25 min</span></li>
+                                    <li>Revisar, citar y dar formato <span class="tiempo-bloque">25 min</span></li>
+                                </ol>
+                            </div>
+                            <div class="respuesta lectura">
+                                <h3>Tu plan de avance · Lectura</h3>
+                                <ol class="bloques">
+                                    <li>Explorar títulos y objetivos <span class="tiempo-bloque">25 min</span></li>
+                                    <li>Leer y subrayar ideas clave <span class="tiempo-bloque">25 min</span></li>
+                                    <li>Organizar apuntes <span class="tiempo-bloque">25 min</span></li>
+                                    <li>Escribir un resumen <span class="tiempo-bloque">25 min</span></li>
+                                </ol>
+                            </div>
+                            <div class="respuesta ejercicios">
+                                <h3>Tu plan de avance · Ejercicios</h3>
+                                <ol class="bloques">
+                                    <li>Revisar conceptos y ejemplos <span class="tiempo-bloque">25 min</span></li>
+                                    <li>Resolver ejercicios iniciales <span class="tiempo-bloque">25 min</span></li>
+                                    <li>Resolver casos más difíciles <span class="tiempo-bloque">25 min</span></li>
+                                    <li>Comprobar y corregir respuestas <span class="tiempo-bloque">25 min</span></li>
+                                </ol>
+                            </div>
+                            <div class="plan-resumen"><strong id="resumen-bloques-texto">4 bloques de 25 min</strong><span id="resumen-descanso-texto">Descansos sugeridos: 5 min entre bloques</span><a class="boton" href="#hu1">Empezar bloque 1</a></div>
+                        </div>
+                    </div>
+                </fieldset>
+                <p class="nota">Los planes son ejemplos predefinidos: no se generan con IA ni se personalizan
+                    automáticamente.</p>
+            </div>
+        </section>
+        <!-- HU1: details abre la pausa reflexiva accesible con teclado, clic o toque -->
+        <section id="hu1" class="seccion">
+            <div class="contenedor">
+                <p class="etiqueta">HU1 · Blindaje focal</p>
+                <h2>Antes de pausar, decide conscientemente</h2>
+                <div class="dos-columnas">
+                    <div>
+                        <p>Visualiza un bloque de estudio y prueba la pausa reflexiva. La duración es una referencia
+                            fija para explicar el criterio de aceptación.</p>
+                        <div class="sesion">
+                            <p class="sesion-etiqueta">BLOQUE 1 DE 4 · DEMOSTRACIÓN INTERACTIVA</p>
+                            <div id="reloj" class="reloj" aria-label="Tiempo de concentración">25:00</div>
+                            <p id="timer-estado">Sesión de enfoque en curso</p>
+                            <div class="estado"><span class="punto" id="punto-estado"></span> <span id="texto-estado">Blindaje focal · Activo</span></div>
+                            
+                            <div class="acciones-timer" style="margin-bottom: 1rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                                <button id="btn-timer-toggle" class="boton" type="button">Pausar cronómetro</button>
+                                <!-- INTEGRACIÓN HU4: Botón de registro de distracción -->
+                                <button id="btn-distraccion" class="boton boton-secundario" type="button">+1 Distracción</button>
+                            </div>
+                            <!-- INTEGRACIÓN HU4: Contador visual en el DOM -->
+                            <p class="contador-distracciones" style="margin-bottom: 1rem;">Distracciones menores: <strong id="distracciones-count">0</strong></p>
+
+                            <details id="modal-pausa" class="pausa">
+                                <summary id="btn-pausa-reflexiva" class="boton boton-alerta">Intentar pausar el estudio</summary>
+                                <div class="modal-referencia" role="group" aria-label="Pausa reflexiva">
+                                    <h3>¿Seguro que deseas pausar?</h3>
+                                    <p>Te quedan <strong id="tiempo-restante-modal">25 minutos</strong> en este bloque.</p>
+                                    <p>Tomar una pausa no planificada puede romper tu estado de flujo. ¿Prefieres continuar o abandonar la sesión?</p>
+                                    <div class="acciones">
+                                        <button id="btn-continuar-estudio" type="button" class="boton">Continuar estudiando</button>
+                                        <a href="confirmacion.html#pausa" class="boton boton-secundario">Abandonar demostración</a>
+                                    </div>
+                                    <p class="nota">Al seleccionar "Continuar estudiando", la sesión se reanuda automáticamente.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div><img class="foto" src="imagenes/galeria1.png" loading="lazy"
+                        alt="Diseño referencial del temporizador PomoPlan">
+                </div>
+                <p class="nota">Limitación HU1: HTML y CSS no detectan cambios de pestaña, no detienen salidas del
+                    navegador y no reproducen aislamiento acústico. Aquí se demuestra solamente el panel de decisión.
+                </p>
+            </div>
+        </section>
+        <!-- HU2: dos radio-buttons reproducen el borrado y deshacer, sin datos persistentes -->
+        <section id="hu2" class="seccion fondo">
+            <div class="contenedor">
+                <p class="etiqueta">HU2 · Seguridad al gestionar tareas</p>
+                <h2>Eliminar por error no debería ser el final</h2>
+                <p>Prueba el estado de borrado y usa «Deshacer» para recuperar las tareas de muestra. El aviso permanece
+                    visible hasta que lo deshagas.</p>
+                <div class="tareas-demo">
+                    <div class="panel-tareas">
+                        <div class="tareas-cabecera">
+                            <h3>Mis tareas completadas</h3><span class="etiqueta-mini" id="contador-tareas">3 tareas</span>
+                        </div>
+                        <div id="lista-tareas" class="lista-tareas">
+                            <p>✓ Leer bibliografía del informe</p>
+                            <p>✓ Organizar referencias académicas</p>
+                            <p>✓ Revisar el esquema del trabajo</p>
+                        </div>
+                        <div id="sin-tareas" class="sin-tareas">
+                            <p>Las tareas completadas se quitaron de esta vista.</p>
+                        </div>
+                        <details id="details-confirmar" class="confirmar">
+                            <summary class="boton boton-alerta">Vaciar tareas completadas</summary>
+                            <div class="panel-confirmar">
+                                <p><strong>¿Eliminar las tareas completadas?</strong></p>
+                                <p>Esta acción moverá las tareas a la papelera temporal.</p>
+                                <button id="btn-confirmar-eliminar" class="boton boton-alerta" type="button">Sí, eliminar tareas</button>
+                            </div>
+                        </details>
+                    </div>
+                    <div id="toast-notificacion" class="toast" role="status">
+                        <strong>Tareas eliminadas</strong>
+                        <span id="texto-toast">Notificación de eliminación realizada.</span>
+                        <button id="btn-deshacer" class="boton" type="button">Deshacer</button>
+                    </div>
+                </div>
+                <p class="nota">Limitación HU2: el borrado y la recuperación son estados visuales con CSS. No existe
+                    temporizador de segundos, guardado local ni eliminación real de datos.</p>
+            </div>
+        </section>
+        <section id="contacto" class="seccion">
+            <div class="contenedor dos-columnas">
+                <div>
+                    <p class="etiqueta">Comparte tu opinión</p>
+                    <h2>¿Qué funcionalidad te sería más útil?</h2>
+                    <p>Completa un formulario de prueba para conocer el recorrido de validación HTML. No se envía ni
+                        almacena información.</p>
+                </div>
+                <form action="confirmacion.html" class="formulario" method="get"><label for="nombre">Nombre de
+                        ejemplo</label><input id="nombre" type="text" placeholder="Tu nombre" required
+                        minlength="2"><label for="correo">Correo de ejemplo</label><input id="correo" type="email"
+                        placeholder="ejemplo@correo.com" required><label for="funcion">Funcionalidad a
+                        comentar</label><select id="funcion" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>HU1 · Blindaje focal</option>
+                        <option>HU2 · Tareas y deshacer</option>
+                        <option>HU3 · Plan de avance</option>
+                    </select><label for="comentario">Tu comentario</label><textarea id="comentario" rows="4"
+                        minlength="10" required placeholder="Escribe al menos 10 caracteres"></textarea><button
+                        class="boton" type="submit">Ver confirmación de ejemplo</button><small>Formulario sin atributos
+                        name: la información no se agrega a la URL.</small></form>
+            </div>
+        </section>
+    </main>
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie-grid">
+                <div><strong>PomoPlan · ODS 4</strong>
+                    <p>Estudio organizado, una tarea a la vez.</p><small>Prototipo académico sin registro ni envío de
+                        datos.</small>
+                </div>
+                <nav aria-label="Redes sociales de referencia" class="redes"><a href="https://www.facebook.com/"
+                        target="_blank" rel="noopener noreferrer"><img src="iconos/facebook.svg" width="22" height="22"
+                            alt="">Facebook</a><a href="https://www.instagram.com/" target="_blank"
+                        rel="noopener noreferrer"><img src="iconos/instagram.svg" width="22" height="22"
+                            alt="">Instagram</a><a href="https://www.youtube.com/" target="_blank"
+                        rel="noopener noreferrer"><img src="iconos/youtube.svg" width="22" height="22"
+                            alt="">YouTube</a></nav>
+            </div>
+            <p class="pie-nota">Enlaces a plataformas generales de referencia; no representan cuentas oficiales de
+                PomoPlan. © 2026 PomoPlan.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

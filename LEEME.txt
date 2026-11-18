@@ -1,0 +1,13 @@
+POMOPLAN MEJORADO · Sitio HTML5 y CSS responsive
+
+Abrir index.html con el navegador. No se necesita servidor ni instalar paquetes.
+Páginas: index.html, recursos.html, confirmacion.html.
+HU3: elegir una de tres actividades y ver cuatro micro-bloques de 25 min.
+HU1: abrir el panel de pausa reflexiva sobre una sesión de ejemplo.
+HU2: confirmar eliminación simulada y seleccionar Deshacer.
+
+IMPORTANTE: El ejercicio sigue la restricción HTML+CSS, sin JavaScript. No hay reloj real, bloqueo de pestañas, sonido, IA, almacenamiento, temporizador de Toast ni envío de formularios. La demostración reproduce visualmente las decisiones, no la funcionalidad dinámica completa.
+
+Pruebas sugeridas: anchos de 1280, 768, 390 y 320 px; enlaces internos, navegación con Tab y Enter, controles táctiles y validación de formulario.
+
+Recursos: imágenes, logo y MP4 del ZIP web_site original. Iconos sociales del ejemplo web_site0. Las redes son enlaces generales, no cuentas oficiales.

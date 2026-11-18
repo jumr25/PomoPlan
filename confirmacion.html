@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="PomoPlan, prototipo web de planificación de estudio y concentración vinculado con el ODS 4.">
+    <title>Confirmación | PomoPlan</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.png">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/interacciones.js" defer></script>
+</head>
+
+<body><a class="saltar" href="#contenido">Saltar al contenido</a>
+    <header class="cabecera">
+        <div class="contenedor barra">
+            <a class="marca" href="index.html#inicio" aria-label="PomoPlan, ir al inicio">
+                <img src="imagenes/logo.png" alt="" width="44" height="44">PomoPlan
+            </a>
+            <button id="boton-menu" class="hamburguesa" type="button"
+                    aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú">
+                <span class="lineas" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span id="texto-menu">Menú</span>
+            </button>
+            <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li>
+                        <details id="resolver" class="desplegable">
+                            <summary>Probar funcionalidades</summary>
+                            <ul class="submenu">
+                                <li><a href="index.html#hu3">HU3 · Plan de avance</a></li>
+                                <li><a href="index.html#hu1">HU1 · Blindaje focal</a></li>
+                                <li><a href="index.html#hu2">HU2 · Tareas y deshacer</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="recursos.html">Video y guía</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- INTEGRACIÓN HU6: Interruptor de Modo Nocturno -->
+            <button id="toggle-modo-nocturno" class="boton boton-secundario" type="button" aria-label="Cambiar modo de lectura">🌙 Modo Nocturno</button>
+        </div>
+    </header>
+    <main id="contenido">
+        <section class="seccion contenedor confirmacion"><span class="confirm-icono" aria-hidden="true">✓</span>
+            <p class="etiqueta">Resultado de demostración</p>
+            <h1>Has completado el recorrido de ejemplo</h1>
+            <p>Esta confirmación es fija: no se ha enviado un mensaje, guardado un plan ni procesado información
+                personal.</p>
+            <p id="pausa">Si llegaste desde la pausa reflexiva, has simulado abandonar el bloque de estudio. Puedes
+                volver a intentarlo cuando quieras.</p>
+            <div class="acciones"><a class="boton" href="index.html#hu3">Volver al planificador</a><a
+                    class="boton boton-secundario" href="index.html#hu1">Volver al blindaje</a><a
+                    class="boton boton-secundario" href="index.html#hu2">Volver a las tareas</a></div>
+        </section>
+    </main>
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie-grid">
+                <div><strong>PomoPlan · ODS 4</strong>
+                    <p>Estudio organizado, una tarea a la vez.</p><small>Prototipo académico sin registro ni envío de
+                        datos.</small>
+                </div>
+                <nav aria-label="Redes sociales de referencia" class="redes"><a href="https://www.facebook.com/"
+                        target="_blank" rel="noopener noreferrer"><img src="iconos/facebook.svg" width="22" height="22"
+                            alt="">Facebook</a><a href="https://www.instagram.com/" target="_blank"
+                        rel="noopener noreferrer"><img src="iconos/instagram.svg" width="22" height="22"
+                            alt="">Instagram</a><a href="https://www.youtube.com/" target="_blank"
+                        rel="noopener noreferrer"><img src="iconos/youtube.svg" width="22" height="22"
+                            alt="">YouTube</a></nav>
+            </div>
+            <p class="pie-nota">Enlaces a plataformas generales de referencia; no representan cuentas oficiales de
+                PomoPlan. © 2026 PomoPlan.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
