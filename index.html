@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="PomoPlan, prototipo web de planificación de estudio y concentración vinculado con el ODS 4.">
+        content="PomoPlan, prototipo web de planificación de estudio y blindaje focal multimodal vinculado con el ODS 4.">
     <title>Inicio | PomoPlan</title>
     <link rel="icon" type="image/png" href="imagenes/logo.png">
     <link rel="stylesheet" href="css/index.css">
@@ -13,14 +13,16 @@
     <script src="js/interacciones.js" defer></script>
 </head>
 
-<body><a class="saltar" href="#contenido">Saltar al contenido</a>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
     <header class="cabecera">
         <div class="contenedor barra">
             <a class="marca" href="index.html#inicio" aria-label="PomoPlan, ir al inicio">
                 <img src="imagenes/logo.png" alt="" width="44" height="44">PomoPlan
             </a>
             <button id="boton-menu" class="hamburguesa" type="button"
-                    aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú">
+                aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú">
                 <span class="lineas" aria-hidden="true"><span></span><span></span><span></span></span>
                 <span id="texto-menu">Menú</span>
             </button>
@@ -42,82 +44,93 @@
                     <li><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </nav>
-            <!-- INTEGRACIÓN HU6: Interruptor de Modo Nocturno -->
-            <button id="toggle-modo-nocturno" class="boton boton-secundario" type="button" aria-label="Cambiar modo de lectura">🌙 Modo Nocturno</button>
+            <!-- HU6: Interruptor de Modo Nocturno -->
+            <button id="toggle-modo-nocturno" class="boton boton-secundario" type="button"
+                aria-label="Cambiar a modo nocturno">🌙 Modo Nocturno</button>
         </div>
     </header>
+
     <main id="contenido">
-        <!-- PASO 1: portada con texto e imagen, dos columnas en escritorio -->
+        <!-- Portada -->
         <section id="inicio" class="hero seccion">
             <div class="contenedor dos-columnas">
                 <div>
                     <p class="etiqueta">ODS 4 · Educación de calidad</p>
                     <h1>Estudia con claridad, avanza paso a paso.</h1>
                     <p class="intro">PomoPlan es una propuesta para estudiantes universitarios que quieren dividir
-                        entregas extensas, enfocarse durante cada bloque y evitar perder tareas por error.</p>
-                    <div class="acciones"><a class="boton" href="#hu3">Configura tu plan</a><a
-                            class="boton boton-secundario" href="#funcionalidades">Explorar funcionalidades</a></div>
-                    <p class="nota">Demostración educativa de interfaz. No se guardan datos ni se bloquean pestañas.</p>
+                        entregas extensas, aislarse del ruido con paisajes sonoros locales y evitar perder tareas por error.</p>
+                    <div class="acciones">
+                        <a class="boton" href="#hu3">Configura tu plan</a>
+                        <a class="boton boton-secundario" href="#hu1">Ir al blindaje focal</a>
+                    </div>
+                    <p class="nota">Demostración educativa de interfaz. Procesamiento 100% local en tu navegador.</p>
                 </div>
-                <figure><img class="foto" src="imagenes/galeria1.png"
+                <figure>
+                    <img class="foto" src="imagenes/galeria1.png"
                         alt="Vista de interfaz de PomoPlan relacionada con estudio y concentración">
                     <figcaption>Una sola tarea a la vez.</figcaption>
                 </figure>
             </div>
         </section>
+
+        <!-- Nosotros -->
         <section id="nosotros" class="seccion fondo">
-            <div class="contenedor dos-columnas"><img class="foto" src="imagenes/nosotros.png" loading="lazy"
+            <div class="contenedor dos-columnas">
+                <img class="foto" src="imagenes/nosotros.png" loading="lazy"
                     alt="Imagen de presentación del proyecto PomoPlan">
                 <div>
                     <p class="etiqueta">Nuestra propuesta</p>
                     <h2>Una experiencia de estudio menos abrumadora</h2>
-                    <p>La sobrecarga académica, el ruido y las distracciones pueden dificultar la concentración.
-                        PomoPlan plantea organizar tareas en micro-bloques y ofrecer decisiones claras al usuario.</p>
+                    <p>La sobrecarga académica, el ruido ambiental y las interrupciones digitales fragmentan la atención.
+                        PomoPlan combina micro-bloques planificados con aislamiento acústico local y avisos no intrusivos.</p>
                     <p>El proyecto se relaciona con el <strong>ODS 4: Educación de calidad</strong> al explorar
-                        herramientas que faciliten la organización y el aprendizaje.</p>
+                        herramientas accesibles que faciliten la concentración profunda.</p>
                 </div>
             </div>
         </section>
+
+        <!-- Recorrido -->
         <section id="funcionalidades" class="seccion">
             <div class="contenedor">
                 <p class="etiqueta">Explora el recorrido</p>
                 <h2>Tres historias de usuario, tres interacciones</h2>
                 <div class="tarjetas">
-                    <article class="tarjeta"><span class="numero">HU3 · Planificación</span><img
-                            src="imagenes/galeria2.png" alt="Referencia visual de planificación por bloques"
-                            loading="lazy">
+                    <article class="tarjeta">
+                        <span class="numero">HU3 · Planificación</span>
+                        <img src="imagenes/galeria2.png" alt="Referencia visual de planificación por bloques" loading="lazy">
                         <h3>Divide tu tarea</h3>
-                        <p>Selecciona una actividad y observa un plan de cuatro micro-bloques de 25 minutos.</p><a
-                            href="#hu3">Probar planificador</a>
+                        <p>Selecciona una actividad, elige tu intensidad (25 o 50 min) y transfiere el bloque al temporizador.</p>
+                        <a href="#hu3">Probar planificador</a>
                     </article>
-                    <article class="tarjeta"><span class="numero">HU1 · Concentración</span><img
-                            src="imagenes/galeria1.png" alt="Referencia de pantalla de concentración" loading="lazy">
-                        <h3>Pausa reflexiva</h3>
-                        <p>Simula una decisión consciente antes de interrumpir un bloque.</p><a href="#hu1">Probar
-                            blindaje</a>
+                    <article class="tarjeta">
+                        <span class="numero">HU1 · Escudo Multimodal</span>
+                        <img src="imagenes/galeria1.png" alt="Referencia de pantalla de concentración" loading="lazy">
+                        <h3>Blindaje focal y acústico</h3>
+                        <p>Activa paisajes sonoros locales, detecta salidas de pestaña sin castigos y controla el foco por voz o gestos.</p>
+                        <a href="#hu1">Probar blindaje</a>
                     </article>
-                    <article class="tarjeta"><span class="numero">HU2 · Recuperación</span><img
-                            src="imagenes/servicios.jpeg" alt="Imagen ilustrativa de organización de actividades"
-                            loading="lazy">
+                    <article class="tarjeta">
+                        <span class="numero">HU2 · Recuperación</span>
+                        <img src="imagenes/servicios.jpeg" alt="Imagen ilustrativa de organización de actividades" loading="lazy">
                         <h3>Deshaz una acción</h3>
-                        <p>Ensaya eliminar tareas completadas y restaurarlas sin perder la lista de ejemplo.</p><a
-                            href="#hu2">Probar tareas</a>
+                        <p>Ensaya eliminar tareas completadas y restaurarlas sin perder la lista de ejemplo.</p>
+                        <a href="#hu2">Probar tareas</a>
                     </article>
                 </div>
             </div>
         </section>
-        <!-- HU3: radios con el mismo name y respuestas relacionadas por :checked -->
+
+        <!-- HU3 & HU5: Planificador sincronizado con HU1 -->
         <section id="hu3" class="seccion fondo">
             <div class="contenedor">
-                <p class="etiqueta">HU3 · Configura tu plan</p>
+                <p class="etiqueta">HU3 &amp; HU5 · Configura tu plan</p>
                 <h2>Convierte una entrega extensa en pasos pequeños</h2>
-                <p>Selecciona el tipo de actividad. En esta simulación se muestran planes ilustrativos de cuatro bloques con descansos sugeridos.</p>
-                
+                <p>Selecciona el tipo de actividad, la duración y el bloque con el que deseas comenzar. Al transferir, el temporizador se cargará en pausa y sugerirá un paisaje sonoro acorde a tu intensidad.</p>
+
                 <fieldset class="orientador">
                     <legend>1. ¿Qué necesitas avanzar?</legend>
-                    
-                    <!-- INTEGRACIÓN HU5: Selector de intensidad de estudio -->
-                    <div class="selector-intensidad-contenedor" style="margin-bottom: 1rem;">
+
+                    <div class="selector-intensidad-contenedor">
                         <label for="intensidad-estudio"><strong>Intensidad de estudio:</strong></label>
                         <select id="intensidad-estudio" name="intensidad-estudio">
                             <option value="25">Bloques estándar (25 min)</option>
@@ -125,104 +138,307 @@
                         </select>
                     </div>
 
-                    <div class="selector-planes"><input class="radio-oculto" type="radio" name="tipo-plan" id="ensayo"
-                            checked><label class="opcion" for="ensayo">Redactar un informe</label><input
-                            class="radio-oculto" type="radio" name="tipo-plan" id="lectura"><label class="opcion"
-                            for="lectura">Lectura de investigación</label><input class="radio-oculto" type="radio"
-                            name="tipo-plan" id="ejercicios"><label class="opcion" for="ejercicios">Resolver
-                            ejercicios</label>
+                    <div class="selector-planes">
+                        <input class="radio-oculto" type="radio" name="tipo-plan" id="ensayo" checked>
+                        <label class="opcion" for="ensayo">Redactar un informe</label>
+
+                        <input class="radio-oculto" type="radio" name="tipo-plan" id="lectura">
+                        <label class="opcion" for="lectura">Lectura de investigación</label>
+
+                        <input class="radio-oculto" type="radio" name="tipo-plan" id="ejercicios">
+                        <label class="opcion" for="ejercicios">Resolver ejercicios</label>
+
                         <div class="resultados" aria-live="polite">
-                            <div class="respuesta ensayo">
+                            <p class="ayuda-bloques">Haz clic en cualquier bloque para elegirlo como bloque activo:</p>
+
+                            <div class="respuesta ensayo" data-plan="ensayo">
                                 <h3>Tu plan de avance · Informe</h3>
                                 <ol class="bloques">
-                                    <li>Leer y comprender la consigna <span class="tiempo-bloque">25 min</span></li>
-                                    <li>Buscar fuentes bibliográficas <span class="tiempo-bloque">25 min</span></li>
-                                    <li>Redactar borrador inicial <span class="tiempo-bloque">25 min</span></li>
-                                    <li>Revisar, citar y dar formato <span class="tiempo-bloque">25 min</span></li>
+                                    <li class="bloque-item seleccionado" data-bloque-index="0" tabindex="0" role="button" aria-pressed="true">
+                                        Leer y comprender la consigna <span class="tiempo-bloque">25 min</span>
+                                    </li>
+                                    <li class="bloque-item" data-bloque-index="1" tabindex="0" role="button" aria-pressed="false">
+                                        Buscar fuentes bibliográficas <span class="tiempo-bloque">25 min</span>
+                                    </li>
+                                    <li class="bloque-item" data-bloque-index="2" tabindex="0" role="button" aria-pressed="false">
+                                        Redactar borrador inicial <span class="tiempo-bloque">25 min</span>
+                                    </li>
+                                    <li class="bloque-item" data-bloque-index="3" tabindex="0" role="button" aria-pressed="false">
+                                        Revisar, citar y dar formato <span class="tiempo-bloque">25 min</span>
+                                    </li>
                                 </ol>
                             </div>
-                            <div class="respuesta lectura">
+
+                            <div class="respuesta lectura" data-plan="lectura">
                                 <h3>Tu plan de avance · Lectura</h3>
                                 <ol class="bloques">
-                                    <li>Explorar títulos y objetivos <span class="tiempo-bloque">25 min</span></li>
-                                    <li>Leer y subrayar ideas clave <span class="tiempo-bloque">25 min</span></li>
-                                    <li>Organizar apuntes <span class="tiempo-bloque">25 min</span></li>
-                                    <li>Escribir un resumen <span class="tiempo-bloque">25 min</span></li>
+                                    <li class="bloque-item seleccionado" data-bloque-index="0" tabindex="0" role="button" aria-pressed="true">
+                                        Explorar títulos y objetivos <span class="tiempo-bloque">25 min</span>
+                                    </li>
+                                    <li class="bloque-item" data-bloque-index="1" tabindex="0" role="button" aria-pressed="false">
+                                        Leer y subrayar ideas clave <span class="tiempo-bloque">25 min</span>
+                                    </li>
+                                    <li class="bloque-item" data-bloque-index="2" tabindex="0" role="button" aria-pressed="false">
+                                        Organizar apuntes <span class="tiempo-bloque">25 min</span>
+                                    </li>
+                                    <li class="bloque-item" data-bloque-index="3" tabindex="0" role="button" aria-pressed="false">
+                                        Escribir un resumen <span class="tiempo-bloque">25 min</span>
+                                    </li>
                                 </ol>
                             </div>
-                            <div class="respuesta ejercicios">
+
+                            <div class="respuesta ejercicios" data-plan="ejercicios">
                                 <h3>Tu plan de avance · Ejercicios</h3>
                                 <ol class="bloques">
-                                    <li>Revisar conceptos y ejemplos <span class="tiempo-bloque">25 min</span></li>
-                                    <li>Resolver ejercicios iniciales <span class="tiempo-bloque">25 min</span></li>
-                                    <li>Resolver casos más difíciles <span class="tiempo-bloque">25 min</span></li>
-                                    <li>Comprobar y corregir respuestas <span class="tiempo-bloque">25 min</span></li>
+                                    <li class="bloque-item seleccionado" data-bloque-index="0" tabindex="0" role="button" aria-pressed="true">
+                                        Revisar conceptos y ejemplos <span class="tiempo-bloque">25 min</span>
+                                    </li>
+                                    <li class="bloque-item" data-bloque-index="1" tabindex="0" role="button" aria-pressed="false">
+                                        Resolver ejercicios iniciales <span class="tiempo-bloque">25 min</span>
+                                    </li>
+                                    <li class="bloque-item" data-bloque-index="2" tabindex="0" role="button" aria-pressed="false">
+                                        Resolver casos más difíciles <span class="tiempo-bloque">25 min</span>
+                                    </li>
+                                    <li class="bloque-item" data-bloque-index="3" tabindex="0" role="button" aria-pressed="false">
+                                        Comprobar y corregir respuestas <span class="tiempo-bloque">25 min</span>
+                                    </li>
                                 </ol>
                             </div>
-                            <div class="plan-resumen"><strong id="resumen-bloques-texto">4 bloques de 25 min</strong><span id="resumen-descanso-texto">Descansos sugeridos: 5 min entre bloques</span><a class="boton" href="#hu1">Empezar bloque 1</a></div>
+
+                            <div class="plan-resumen">
+                                <div>
+                                    <strong id="resumen-bloques-texto">4 bloques de 25 min</strong>
+                                    <span id="resumen-descanso-texto" class="resumen-sub">Descansos sugeridos: 5 min entre bloques</span>
+                                </div>
+                                <button id="btn-transferir-sesion" class="boton" type="button">
+                                    Cargar bloque 1 (25 min) en el temporizador
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </fieldset>
-                <p class="nota">Los planes son ejemplos predefinidos: no se generan con IA ni se personalizan
-                    automáticamente.</p>
+                <p class="nota">Los planes son ejemplos predefinidos: no se generan con IA ni se personalizan automáticamente.</p>
             </div>
         </section>
-        <!-- HU1: details abre la pausa reflexiva accesible con teclado, clic o toque -->
+
+        <!-- HU1: Escudo Multimodal (Blindaje Focal + Paisajes Sonoros Web Audio + Reincorporación + Cierre Armonioso) -->
         <section id="hu1" class="seccion">
             <div class="contenedor">
-                <p class="etiqueta">HU1 · Blindaje focal</p>
-                <h2>Antes de pausar, decide conscientemente</h2>
-                <div class="dos-columnas">
-                    <div>
-                        <p>Visualiza un bloque de estudio y prueba la pausa reflexiva. La duración es una referencia
-                            fija para explicar el criterio de aceptación.</p>
-                        <div class="sesion">
-                            <p class="sesion-etiqueta">BLOQUE 1 DE 4 · DEMOSTRACIÓN INTERACTIVA</p>
-                            <div id="reloj" class="reloj" aria-label="Tiempo de concentración">25:00</div>
-                            <p id="timer-estado">Sesión de enfoque en curso</p>
-                            <div class="estado"><span class="punto" id="punto-estado"></span> <span id="texto-estado">Blindaje focal · Activo</span></div>
-                            
-                            <div class="acciones-timer" style="margin-bottom: 1rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-                                <button id="btn-timer-toggle" class="boton" type="button">Pausar cronómetro</button>
-                                <!-- INTEGRACIÓN HU4: Botón de registro de distracción -->
-                                <button id="btn-distraccion" class="boton boton-secundario" type="button">+1 Distracción</button>
-                            </div>
-                            <!-- INTEGRACIÓN HU4: Contador visual en el DOM -->
-                            <p class="contador-distracciones" style="margin-bottom: 1rem;">Distracciones menores: <strong id="distracciones-count">0</strong></p>
+                <p class="etiqueta">HU1 · Escudo multimodal y blindaje focal</p>
+                <h2>Entorno insonorizado y continuo, bajo tu control total</h2>
 
-                            <details id="modal-pausa" class="pausa">
-                                <summary id="btn-pausa-reflexiva" class="boton boton-alerta">Intentar pausar el estudio</summary>
-                                <div class="modal-referencia" role="group" aria-label="Pausa reflexiva">
-                                    <h3>¿Seguro que deseas pausar?</h3>
-                                    <p>Te quedan <strong id="tiempo-restante-modal">25 minutos</strong> en este bloque.</p>
-                                    <p>Tomar una pausa no planificada puede romper tu estado de flujo. ¿Prefieres continuar o abandonar la sesión?</p>
-                                    <div class="acciones">
-                                        <button id="btn-continuar-estudio" type="button" class="boton">Continuar estudiando</button>
-                                        <a href="confirmacion.html#pausa" class="boton boton-secundario">Abandonar demostración</a>
-                                    </div>
-                                    <p class="nota">Al seleccionar "Continuar estudiando", la sesión se reanuda automáticamente.</p>
-                                </div>
-                            </details>
+                <div class="hu1-grid">
+                    <!-- Columna 1: Temporizador, reincorporación y cierre armonioso -->
+                    <div class="sesion" aria-labelledby="titulo-bloque-activo">
+                        <div class="sesion-cabecera">
+                            <span id="badge-sincronizacion" class="badge-sync" role="status">
+                                ✓ Sincronizado con tu plan
+                            </span>
+                            <a href="#hu3" class="enlace-modificar">Modificar en planificador</a>
                         </div>
-                    </div><img class="foto" src="imagenes/galeria1.png" loading="lazy"
-                        alt="Diseño referencial del temporizador PomoPlan">
+
+                        <!-- Aviso suave de reincorporación tras cambio de pestaña (oculto por defecto) -->
+                        <div id="banner-reincorporacion" class="banner-suave banner-reincorporacion" role="status" aria-live="polite" hidden>
+                            <div class="banner-suave-texto">
+                                <strong>Bienvenido de vuelta</strong>
+                                <p id="texto-reincorporacion">Saliste de la pestaña brevemente. Tu bloque sigue listo para continuar.</p>
+                            </div>
+                            <div class="banner-suave-acciones">
+                                <button id="btn-reincorporar-continuar" class="boton-mini activo" type="button">Seguir enfocado</button>
+                                <button id="btn-reincorporar-distraccion" class="boton-mini" type="button">+1 Distracción</button>
+                            </div>
+                        </div>
+
+                        <!-- Notificación armoniosa de cierre (reemplaza alert(), oculta por defecto) -->
+                        <div id="banner-cierre" class="banner-suave banner-cierre" role="status" aria-live="polite" hidden>
+                            <div class="banner-suave-texto">
+                                <strong>✨ Bloque completado con éxito</strong>
+                                <p id="texto-cierre">Toma un descanso breve para consolidar lo aprendido antes del siguiente paso.</p>
+                            </div>
+                            <div class="banner-suave-acciones">
+                                <button id="btn-cierre-siguiente" class="boton-mini activo" type="button">Cargar siguiente bloque</button>
+                                <button id="btn-cierre-cerrar" class="boton-mini" type="button">Cerrar aviso</button>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta de sesión cargada -->
+                        <div class="resumen-sesion-cargada">
+                            <p id="sesion-etiqueta" class="sesion-etiqueta">BLOQUE 1 DE 4 · REDACTAR UN INFORME</p>
+                            <h3 id="titulo-bloque-activo" class="titulo-bloque-activo">Leer y comprender la consigna</h3>
+                            <p id="meta-sesion" class="meta-sesion">Duración: 25 min · Descanso sugerido: 5 min</p>
+                        </div>
+
+                        <!-- Control rápido de bloque y duración -->
+                        <div class="controles-rapidos" aria-label="Ajustes rápidos de la sesión">
+                            <div class="nav-bloques">
+                                <button id="btn-bloque-anterior" class="boton-mini" type="button" disabled>← Anterior</button>
+                                <button id="btn-bloque-siguiente" class="boton-mini" type="button">Siguiente →</button>
+                            </div>
+                            <div class="ajuste-duracion" role="group" aria-label="Cambiar duración del bloque">
+                                <button id="btn-duracion-25" class="boton-mini activo" type="button" data-minutos="25" aria-pressed="true">25 min</button>
+                                <button id="btn-duracion-50" class="boton-mini" type="button" data-minutos="50" aria-pressed="false">50 min</button>
+                            </div>
+                        </div>
+
+                        <!-- Reloj y estado -->
+                        <div id="reloj" class="reloj" aria-label="Tiempo restante de concentración">25:00</div>
+                        <div id="estado-pill" class="estado pausado">
+                            <span class="punto" id="punto-estado"></span>
+                            <span id="texto-estado">En pausa · Listo para iniciar</span>
+                        </div>
+
+                        <!-- Aviso accesible en línea -->
+                        <p id="aviso-sesion" class="aviso-sesion" role="status" aria-live="polite">
+                            Sesión cargada en pausa. Confirma cuando quieras comenzar.
+                        </p>
+
+                        <!-- Acciones principales del temporizador -->
+                        <div class="acciones-timer">
+                            <button id="btn-timer-toggle" class="boton" type="button">Confirmar e iniciar bloque</button>
+                            <button id="btn-reiniciar-bloque" class="boton boton-secundario" type="button">↺ Reiniciar</button>
+                            <button id="btn-distraccion" class="boton boton-secundario" type="button">+1 Distracción</button>
+                        </div>
+
+                        <p class="contador-distracciones">
+                            Distracciones menores: <strong id="distracciones-count">0</strong> ·
+                            Salidas de pestaña: <strong id="salidas-pestana-count">0</strong>
+                        </p>
+
+                        <!-- Pausa Reflexiva -->
+                        <details id="modal-pausa" class="pausa">
+                            <summary id="btn-pausa-reflexiva" class="boton boton-alerta">Intentar pausar el estudio</summary>
+                            <div class="modal-referencia" role="group" aria-label="Pausa reflexiva">
+                                <h3>¿Seguro que deseas pausar?</h3>
+                                <p>Te quedan <strong id="tiempo-restante-modal">25 minutos</strong> en el bloque <strong id="bloque-modal-nombre">Leer y comprender la consigna</strong>.</p>
+                                <p>Tomar una pausa no planificada puede romper tu estado de flujo. ¿Prefieres continuar o abandonar la sesión?</p>
+                                <div class="acciones">
+                                    <button id="btn-continuar-estudio" type="button" class="boton">Continuar estudiando</button>
+                                    <a href="confirmacion.html#pausa" class="boton boton-secundario">Abandonar demostración</a>
+                                </div>
+                                <p class="nota">Al seleccionar "Continuar estudiando", la sesión se reanuda automáticamente.</p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- Columna 2: Escudo Acústico Local, Preferencias HAI y Control Multimodal -->
+                    <aside class="panel-escudo" aria-label="Escudo acústico y control multimodal">
+                        <div class="escudo-cabecera">
+                            <div>
+                                <p class="etiqueta-pequena">Aislamiento Acústico · Web Audio API</p>
+                                <h3 class="escudo-titulo">Paisajes sonoros locales</h3>
+                            </div>
+                            <span class="badge-local" title="Audio sintetizado en tu dispositivo sin conexión a servidores">
+                                🔒 100% local
+                            </span>
+                        </div>
+
+                        <!-- Recomendación transparente (Human-AI Interaction) -->
+                        <div id="caja-recomendacion" class="caja-recomendacion" role="region" aria-live="polite">
+                            <div class="recomendacion-superior">
+                                <strong id="titulo-recomendacion">Sugerencia para bloque de 25 min: Lluvia suave</strong>
+                                <button id="btn-aplicar-recomendacion" class="boton-mini" type="button">Aplicar sugerencia</button>
+                            </div>
+                            <p id="motivo-recomendacion" class="motivo-recomendacion">
+                                La lluvia suave genera un ritmo constante de frecuencias medias ideal para sesiones estándar de 25 min sin provocar fatiga auditiva.
+                            </p>
+                        </div>
+
+                        <!-- Zona interactiva táctil (Swipe horizontal para alternar ambientes) -->
+                        <div id="zona-gestos-sonido" class="zona-gestos-sonido" aria-label="Selector de paisaje sonoro. Desliza a izquierda o derecha para alternar">
+                            <div class="selector-paisajes" role="radiogroup" aria-label="Elegir paisaje sonoro">
+                                <button type="button" class="chip-sonido" data-sonido="marron" aria-pressed="false">
+                                    <span class="chip-icono" aria-hidden="true">🌊</span>
+                                    <span>Ruido marrón</span>
+                                    <small>Graves profundos</small>
+                                </button>
+                                <button type="button" class="chip-sonido activo" data-sonido="lluvia" aria-pressed="true">
+                                    <span class="chip-icono" aria-hidden="true">🌧️</span>
+                                    <span>Lluvia suave</span>
+                                    <small>Cadencia orgánica</small>
+                                </button>
+                                <button type="button" class="chip-sonido" data-sonido="blanco" aria-pressed="false">
+                                    <span class="chip-icono" aria-hidden="true">☁️</span>
+                                    <span>Ruido blanco</span>
+                                    <small>Enmascarado parejo</small>
+                                </button>
+                            </div>
+                            <p class="pista-gesto">
+                                Gesto táctil: desliza ↔ aquí · Teclado: <kbd>M</kbd> silenciar ya · <kbd>N</kbd> cambiar ambiente
+                            </p>
+                        </div>
+
+                        <!-- Controles de reproducción y volumen -->
+                        <div class="controles-audio">
+                            <button id="btn-audio-toggle" class="boton" type="button" aria-pressed="false">
+                                🔊 Activar paisaje sonoro
+                            </button>
+                            <button id="btn-silencio-emergencia" class="boton boton-secundario" type="button"
+                                title="Silencia todo el audio al instante (Tecla M)">
+                                🔇 Silenciar (<kbd>M</kbd>)
+                            </button>
+                        </div>
+
+                        <div class="control-volumen">
+                            <label for="slider-volumen">
+                                <span>Volumen del ambiente</span>
+                                <strong id="valor-volumen">35%</strong>
+                            </label>
+                            <input id="slider-volumen" type="range" min="0" max="100" value="35" step="5">
+                        </div>
+
+                        <p id="estado-audio" class="estado-audio" role="status" aria-live="polite">
+                            Audio en espera. El sonido nunca inicia sin tu permiso.
+                        </p>
+
+                        <!-- Preferencias de control total del usuario (HAI) -->
+                        <div class="preferencias-hai">
+                            <h4>Control de alertas y privacidad</h4>
+                            <label class="switch-fila">
+                                <input id="chk-alerta-pestana" type="checkbox" checked>
+                                <span>Aviso suave al volver de otra pestaña</span>
+                            </label>
+                            <label class="switch-fila">
+                                <input id="chk-campana-cierre" type="checkbox" checked>
+                                <span>Acorde armonioso al finalizar el bloque</span>
+                            </label>
+                            <button id="btn-probar-cierre" class="boton-mini" type="button">
+                                🔔 Escuchar tono de cierre
+                            </button>
+                        </div>
+
+                        <!-- Control por Voz Opcional (Web Speech API) -->
+                        <div class="panel-voz" aria-label="Control por voz opcional">
+                            <div class="panel-voz-cabecera">
+                                <button id="btn-voz-toggle" class="boton boton-secundario boton-voz" type="button" aria-pressed="false">
+                                    🎙️ Activar control por voz
+                                </button>
+                                <span id="voz-estado" class="voz-estado" role="status" aria-live="polite">Voz desactivada</span>
+                            </div>
+                            <p class="voz-comandos">
+                                <strong>Sesión:</strong> "iniciar", "pausar", "reiniciar", "siguiente bloque", "distracción".<br>
+                                <strong>Audio:</strong> "ruido marrón", "ruido blanco", "lluvia", "cambiar ambiente", "silenciar".
+                            </p>
+                        </div>
+                    </aside>
                 </div>
-                <p class="nota">Limitación HU1: HTML y CSS no detectan cambios de pestaña, no detienen salidas del
-                    navegador y no reproducen aislamiento acústico. Aquí se demuestra solamente el panel de decisión.
+
+                <p class="nota">
+                    Confianza y privacidad: el generador de audio (Web Audio API), la detección de pestaña (Page Visibility API) y el reconocimiento de voz se ejecutan localmente en tu navegador. No se transmiten audios ni métricas de concentración a servidores externos.
                 </p>
             </div>
         </section>
-        <!-- HU2: dos radio-buttons reproducen el borrado y deshacer, sin datos persistentes -->
+
+        <!-- HU2: Gestión de tareas y recuperación -->
         <section id="hu2" class="seccion fondo">
             <div class="contenedor">
                 <p class="etiqueta">HU2 · Seguridad al gestionar tareas</p>
                 <h2>Eliminar por error no debería ser el final</h2>
-                <p>Prueba el estado de borrado y usa «Deshacer» para recuperar las tareas de muestra. El aviso permanece
-                    visible hasta que lo deshagas.</p>
+                <p>Prueba el estado de borrado y usa «Deshacer» para recuperar las tareas de muestra. El aviso permanece visible hasta que lo deshagas.</p>
                 <div class="tareas-demo">
                     <div class="panel-tareas">
                         <div class="tareas-cabecera">
-                            <h3>Mis tareas completadas</h3><span class="etiqueta-mini" id="contador-tareas">3 tareas</span>
+                            <h3>Mis tareas completadas</h3>
+                            <span class="etiqueta-mini" id="contador-tareas">3 tareas</span>
                         </div>
                         <div id="lista-tareas" class="lista-tareas">
                             <p>✓ Leer bibliografía del informe</p>
@@ -247,51 +463,64 @@
                         <button id="btn-deshacer" class="boton" type="button">Deshacer</button>
                     </div>
                 </div>
-                <p class="nota">Limitación HU2: el borrado y la recuperación son estados visuales con CSS. No existe
-                    temporizador de segundos, guardado local ni eliminación real de datos.</p>
+                <p class="nota">Limitación HU2: el borrado y la recuperación son estados visuales en esta sesión. No existe guardado local ni eliminación real de datos.</p>
             </div>
         </section>
+
+        <!-- Contacto -->
         <section id="contacto" class="seccion">
             <div class="contenedor dos-columnas">
                 <div>
                     <p class="etiqueta">Comparte tu opinión</p>
                     <h2>¿Qué funcionalidad te sería más útil?</h2>
-                    <p>Completa un formulario de prueba para conocer el recorrido de validación HTML. No se envía ni
-                        almacena información.</p>
+                    <p>Completa un formulario de prueba para conocer el recorrido de validación HTML. No se envía ni almacena información.</p>
                 </div>
-                <form action="confirmacion.html" class="formulario" method="get"><label for="nombre">Nombre de
-                        ejemplo</label><input id="nombre" type="text" placeholder="Tu nombre" required
-                        minlength="2"><label for="correo">Correo de ejemplo</label><input id="correo" type="email"
-                        placeholder="ejemplo@correo.com" required><label for="funcion">Funcionalidad a
-                        comentar</label><select id="funcion" required>
+                <form action="confirmacion.html" class="formulario" method="get">
+                    <label for="nombre">Nombre de ejemplo</label>
+                    <input id="nombre" type="text" placeholder="Tu nombre" required minlength="2">
+
+                    <label for="correo">Correo de ejemplo</label>
+                    <input id="correo" type="email" placeholder="ejemplo@correo.com" required>
+
+                    <label for="funcion">Funcionalidad a comentar</label>
+                    <select id="funcion" required>
                         <option value="">Selecciona una opción</option>
-                        <option>HU1 · Blindaje focal</option>
+                        <option>HU1 · Blindaje focal y escudo sonoro</option>
                         <option>HU2 · Tareas y deshacer</option>
                         <option>HU3 · Plan de avance</option>
-                    </select><label for="comentario">Tu comentario</label><textarea id="comentario" rows="4"
-                        minlength="10" required placeholder="Escribe al menos 10 caracteres"></textarea><button
-                        class="boton" type="submit">Ver confirmación de ejemplo</button><small>Formulario sin atributos
-                        name: la información no se agrega a la URL.</small></form>
+                    </select>
+
+                    <label for="comentario">Tu comentario</label>
+                    <textarea id="comentario" rows="4" minlength="10" required placeholder="Escribe al menos 10 caracteres"></textarea>
+
+                    <button class="boton" type="submit">Ver confirmación de ejemplo</button>
+                    <small>Formulario sin atributos name: la información no se agrega a la URL.</small>
+                </form>
             </div>
         </section>
     </main>
+
     <footer class="pie">
         <div class="contenedor">
             <div class="pie-grid">
-                <div><strong>PomoPlan · ODS 4</strong>
-                    <p>Estudio organizado, una tarea a la vez.</p><small>Prototipo académico sin registro ni envío de
-                        datos.</small>
+                <div>
+                    <strong>PomoPlan · ODS 4</strong>
+                    <p>Estudio organizado, una tarea a la vez.</p>
+                    <small>Prototipo académico sin registro ni envío de datos.</small>
                 </div>
-                <nav aria-label="Redes sociales de referencia" class="redes"><a href="https://www.facebook.com/"
-                        target="_blank" rel="noopener noreferrer"><img src="iconos/facebook.svg" width="22" height="22"
-                            alt="">Facebook</a><a href="https://www.instagram.com/" target="_blank"
-                        rel="noopener noreferrer"><img src="iconos/instagram.svg" width="22" height="22"
-                            alt="">Instagram</a><a href="https://www.youtube.com/" target="_blank"
-                        rel="noopener noreferrer"><img src="iconos/youtube.svg" width="22" height="22"
-                            alt="">YouTube</a></nav>
+                <nav aria-label="Redes sociales de referencia" class="redes">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="iconos/facebook.svg" width="22" height="22" alt="">Facebook
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="iconos/instagram.svg" width="22" height="22" alt="">Instagram
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="iconos/youtube.svg" width="22" height="22" alt="">YouTube
+                    </a>
+                </nav>
             </div>
-            <p class="pie-nota">Enlaces a plataformas generales de referencia; no representan cuentas oficiales de
-                PomoPlan. © 2026 PomoPlan.</p>
+            <p class="pie-nota">Enlaces a plataformas generales de referencia; no representan cuentas oficiales de PomoPlan. © 2026 PomoPlan.</p>
         </div>
     </footer>
 </body>
